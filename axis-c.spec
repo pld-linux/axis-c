@@ -1,8 +1,8 @@
 # TODO:
 # - look at examples. maybe package it, or simply include in -examples?
 %define		fversion	%(echo %{version} |tr . -)
-Summary:	WebServices - Axis
-Summary(pl):	WebServices - Axis
+Summary:	Axis - implementation of the SOAP submission to W3C
+Summary(pl):	Axis - implementacja protoko³u SOAP przekazanego do W3C
 Name:		axis-c
 Version:	1.2
 Release:	1
@@ -16,8 +16,8 @@ BuildRequires:	apr-devel
 BuildRequires:	apache-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	expat-devel
+BuildRequires:	libtool
 BuildRequires:	xerces-c-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,28 +30,28 @@ Apache Axis jest implementacj± SOAP ("Simple Object Access Protocol")
 przekazan± do W3C.
 
 %package devel
-Summary:	WebServices - Axis - development files
-Summary(pl):	WebServices - Axis - pliki nag³ówkowe
+Summary:	Development files for Axis libraries
+Summary(pl):	Pliki programistyczne bibliotek Axis
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
-WebServices - Axis - development files.
+Development files for Axis libraries.
 
 %description devel -l pl
-WebServices - Axis - pliki nag³ówkowe.
+Pliki programistyczne bibliotek Axis.
 
 %package static
-Summary:	WebServices - Axis - static files
-Summary(pl):	WebServices - Axis - biblioteka statyczna
+Summary:	Static Axis libraries
+Summary(pl):	Statyczne biblioteki Axis
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-WebServices - Axis - static files.
+Static Axis libraries.
 
 %description static -l pl
-WebServices - Axis - biblioteka statyczna.
+Statyczne biblioteki Axis.
 
 %prep
 %setup -q -n %{name}-src-%{fversion}-linux
@@ -74,6 +74,7 @@ CXXFLAGS="%{rpmcflags} -I`pwd`/include -I%{_includedir}/apr-util -I%{_includedir
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_includedir}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -93,8 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc docs/apidocs/html docs/RFC/* docs/QnA/*
-%{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/axis
 
 %files static
