@@ -11,9 +11,9 @@ Group:		Libraries
 Source0:	http://www.apache.org/dist/ws/axis-c/source/linux/%{name}-src-%{fversion}-linux.tar.gz
 # Source0-md5:	9c68ba2f2d8029aed0694881bc2f491b
 URL:		http://ws.apache.org/axis/
-BuildRequires:	apr-util-devel
-BuildRequires:	apr-devel
 BuildRequires:	apache-devel
+BuildRequires:	apr-devel
+BuildRequires:	apr-util-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	expat-devel
