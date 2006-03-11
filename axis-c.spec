@@ -5,7 +5,7 @@ Summary:	Axis - implementation of the SOAP submission to W3C
 Summary(pl):	Axis - implementacja protoko³u SOAP przekazanego do W3C
 Name:		axis-c
 Version:	1.2
-Release:	1
+Release:	2
 License:	Apache Software License
 Group:		Libraries
 Source0:	http://www.apache.org/dist/ws/axis-c/source/linux/%{name}-src-%{fversion}-linux.tar.gz
