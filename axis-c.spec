@@ -2,7 +2,7 @@
 # - look at examples. maybe package it, or simply include in -examples?
 %define		fversion	%(echo %{version} |tr . -)
 Summary:	Axis - implementation of the SOAP submission to W3C
-Summary(pl):	Axis - implementacja protoko³u SOAP przekazanego do W3C
+Summary(pl.UTF-8):   Axis - implementacja protokoÅ‚u SOAP przekazanego do W3C
 Name:		axis-c
 Version:	1.2
 Release:	2
@@ -25,32 +25,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Apache Axis is an implementation of the SOAP ("Simple Object Access
 Protocol") submission to W3C.
 
-%description -l pl
-Apache Axis jest implementacj± SOAP ("Simple Object Access Protocol")
-przekazan± do W3C.
+%description -l pl.UTF-8
+Apache Axis jest implementacjÄ… SOAP ("Simple Object Access Protocol")
+przekazanÄ… do W3C.
 
 %package devel
 Summary:	Development files for Axis libraries
-Summary(pl):	Pliki programistyczne bibliotek Axis
+Summary(pl.UTF-8):   Pliki programistyczne bibliotek Axis
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Development files for Axis libraries.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki programistyczne bibliotek Axis.
 
 %package static
 Summary:	Static Axis libraries
-Summary(pl):	Statyczne biblioteki Axis
+Summary(pl.UTF-8):   Statyczne biblioteki Axis
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Axis libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki Axis.
 
 %prep
