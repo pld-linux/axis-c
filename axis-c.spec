@@ -2,7 +2,7 @@
 # - look at examples. maybe package it, or simply include in -examples?
 %define		fversion	%(echo %{version} |tr . -)
 Summary:	Axis - implementation of the SOAP submission to W3C
-Summary(pl.UTF-8):   Axis - implementacja protokołu SOAP przekazanego do W3C
+Summary(pl.UTF-8):	Axis - implementacja protokołu SOAP przekazanego do W3C
 Name:		axis-c
 Version:	1.2
 Release:	2
@@ -31,7 +31,7 @@ przekazaną do W3C.
 
 %package devel
 Summary:	Development files for Axis libraries
-Summary(pl.UTF-8):   Pliki programistyczne bibliotek Axis
+Summary(pl.UTF-8):	Pliki programistyczne bibliotek Axis
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -43,7 +43,7 @@ Pliki programistyczne bibliotek Axis.
 
 %package static
 Summary:	Static Axis libraries
-Summary(pl.UTF-8):   Statyczne biblioteki Axis
+Summary(pl.UTF-8):	Statyczne biblioteki Axis
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
